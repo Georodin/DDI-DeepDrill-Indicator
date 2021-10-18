@@ -29,7 +29,8 @@ public class HarmonyPatch
         {
             CompDeepScanner compDeepScanner = singleSelectedThing.TryGetComp<CompDeepScanner>();
             CompDeepDrill compDeepDrill = singleSelectedThing.TryGetComp<CompDeepDrill>();
-            if ((compDeepScanner != null || compDeepDrill != null) && ___map.deepResourceGrid.AnyActiveDeepScannersOnMap())
+
+            if (((compDeepScanner != null || compDeepDrill != null)||singleSelectedThing.def.defName.Contains("autodrill")) && ___map.deepResourceGrid.AnyActiveDeepScannersOnMap())
             {
                 int i = 0;
                 foreach (ushort entry in ___defGrid)
@@ -49,8 +50,8 @@ public class HarmonyPatch
                             {
                                 Vector2 vector = c.ToVector3().MapToUIPosition();
 
-                                float num2 = (UI.CurUICellSize() - 27f) / 2f;
-                                Rect rect = new Rect(vector.x + num2, vector.y - UI.CurUICellSize() + num2, 27f, 27f);
+                                float num2 = (UI.CurUICellSize() - DeepDrill_Indicator.Settings.sliderValueDDI) / 2f;
+                                Rect rect = new Rect(vector.x + num2, vector.y - UI.CurUICellSize() + num2, DeepDrill_Indicator.Settings.sliderValueDDI, DeepDrill_Indicator.Settings.sliderValueDDI);
                                 Widgets.ThingIcon(rect, thingDef);
                                 if (Find.CameraDriver.CurrentZoom==CameraZoomRange.Closest) {
                                     GUI.color = Color.white;
