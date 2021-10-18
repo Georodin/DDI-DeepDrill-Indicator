@@ -15,8 +15,6 @@ public class HarmonyPatch
 {
     static HarmonyPatch()
     {
-        Log.Message("Im loading...");
-
         Harmony harmony = new Harmony("georodin.deepdrill");
 
         harmony.PatchAll();

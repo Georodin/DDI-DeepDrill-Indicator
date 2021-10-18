@@ -25,7 +25,7 @@ namespace DeepDrill_Indicator
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.Label("Icon Size: ("+Mathf.FloorToInt(Settings.sliderValueDDI) +")");
+            listingStandard.Label("DeepDrillIconSize".Translate()+Mathf.FloorToInt(Settings.sliderValueDDI));
             Settings.sliderValueDDI = listingStandard.Slider(DeepDrill_Indicator.Settings.sliderValueDDI, 6f, 80f);
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
@@ -33,7 +33,7 @@ namespace DeepDrill_Indicator
 
         public override string SettingsCategory()
         {
-            return "DeepDrill_Indicator";
+            return "DeepDrillIndicator".Translate();
         }
     }
 }
