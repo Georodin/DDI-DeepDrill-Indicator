@@ -7,3 +7,4 @@ D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DDI-DeepDrill-Indica
 D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.csproj.AssemblyReference.cache
 D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.csproj.CoreCompileInputs.cache
 D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.csproj.CopyComplete
