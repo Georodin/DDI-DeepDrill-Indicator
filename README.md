@@ -10,3 +10,5 @@ Let me know about bugs or improvements here or at Steam...
 
 Big thanks to the people in the RimWorld Discord #mod-development section!
 (https://discord.gg/rimworld)
+
+V1.3 reintroduced next to V1.4 version by TurtleShroom
