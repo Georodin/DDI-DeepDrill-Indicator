@@ -96,31 +96,40 @@ public class HarmonyPatch
     {
         Thing singleSelectedThing = Find.Selector.SingleSelectedThing;
 
-        //check for Scanner
-        if (singleSelectedThing.TryGetComp<CompDeepScanner>() != null)
+        if (singleSelectedThing!=null)
         {
-            return true;
-        }
-
-        //check for Drill
-        if (singleSelectedThing.TryGetComp<CompDeepDrill>() != null)
-        {
-            return true;
-        }
-
-        //check for minified Drill
-        if (singleSelectedThing is MinifiedThing minified)
-        {
-            if (minified.InnerThing.TryGetComp<CompDeepDrill>() != null)
+            //check for Scanner
+            if (singleSelectedThing.TryGetComp<CompDeepScanner>() != null)
             {
                 return true;
             }
-        }
 
-        // Check for DeepDrill blueprint
-        if (singleSelectedThing is Blueprint_Build blueprint)
-        {
-            if (blueprint.def.entityDefToBuild == ThingDefOf.DeepDrill)
+            //check for Drill
+            if (singleSelectedThing.TryGetComp<CompDeepDrill>() != null)
+            {
+                return true;
+            }
+
+            //check for minified Drill
+            if (singleSelectedThing is MinifiedThing minified)
+            {
+                if (minified.InnerThing.TryGetComp<CompDeepDrill>() != null)
+                {
+                    return true;
+                }
+            }
+
+            // Check for DeepDrill blueprint
+            if (singleSelectedThing is Blueprint_Build blueprint)
+            {
+                if (blueprint.def.entityDefToBuild == ThingDefOf.DeepDrill)
+                {
+                    return true;
+                }
+            }
+
+            // Check for AutoDrill from Mod "AutoDrillReUpload 1.4" id=2884084876
+            if (singleSelectedThing.def.defName.Contains("autodrill"))
             {
                 return true;
             }
@@ -138,6 +147,12 @@ public class HarmonyPatch
             BuildableDef buildable = designatorBuild.PlacingDef as BuildableDef;
 
             if (buildable != null && buildable is ThingDef thingDef && thingDef == ThingDefOf.DeepDrill)
+            {
+                return true;
+            }
+
+            //check for AutoDrill from Mod "AutoDrillReUpload 1.4" id=2884084876
+            if (buildable.defName.Contains("autodrill"))
             {
                 return true;
             }
