@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Reflection;
-using System.Threading.Tasks;
-using HarmonyLib;
+﻿using HarmonyLib;
 using Verse;
 using RimWorld;
 using UnityEngine;
 
-[HarmonyLib.HarmonyPatch(typeof(DeepResourceGrid), "DeepResourcesOnGUI")]
+[HarmonyPatch(typeof(DeepResourceGrid), "DeepResourcesOnGUI")]
 [StaticConstructorOnStartup]
-public class HarmonyPatch
+public class DDIHarmonyPatch
 {
-    static HarmonyPatch()
+    static DDIHarmonyPatch()
     {
         Harmony harmony = new Harmony("georodin.deepdrill");
 
@@ -53,7 +47,7 @@ public class HarmonyPatch
                                 Text.Font = GameFont.Small;
                                 Text.Anchor = TextAnchor.MiddleCenter;
 
-                                Widgets.Label(new Rect(rect.x + (rect.width / 2f) - 15f, rect.y, 30f, 29f), num.ToString());
+                                Widgets.Label(rect, num.ToString());
 
                                 Text.Anchor = TextAnchor.UpperLeft; // Resetting the text anchor
                             }
@@ -66,10 +60,6 @@ public class HarmonyPatch
 
         return false;
     }
-
-    static Thing last_selected_thing = null;
-    static Designator last_selected_designator = null;
-    static BuildableDef last_selected_buildable = null;
 
     static bool IsDeepMiningRelated(Map ___map)
     {
@@ -96,7 +86,7 @@ public class HarmonyPatch
     {
         Thing singleSelectedThing = Find.Selector.SingleSelectedThing;
 
-        if (singleSelectedThing!=null)
+        if (singleSelectedThing != null)
         {
             //check for Scanner
             if (singleSelectedThing.TryGetComp<CompDeepScanner>() != null)

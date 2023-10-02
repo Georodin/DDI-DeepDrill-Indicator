@@ -12,3 +12,4 @@ C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Assemblies\DeepDrill-
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.csproj.AssemblyReference.cache
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.csproj.CoreCompileInputs.cache
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.dll
+C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\1.4\Assemblies\DeepDrill-Indicator.dll
