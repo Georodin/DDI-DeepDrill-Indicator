@@ -7,6 +7,10 @@ using UnityEngine;
 [StaticConstructorOnStartup]
 public class DDIHarmonyPatch
 {
+
+    static bool flagPerformance = false;
+    static int counter = 0;
+
     static DDIHarmonyPatch()
     {
         Harmony harmony = new Harmony("georodin.deepdrill");
@@ -18,6 +22,21 @@ public class DDIHarmonyPatch
     {
         if (IsDeepMiningRelated(___map))
         {
+            if (!flagPerformance)
+            {
+                //is Scanner running?
+                if (!___map.deepResourceGrid.AnyActiveDeepScannersOnMap())
+                {
+                    return false;
+                }
+                else
+                {
+                    flagPerformance = true;
+                    counter = 0;
+                }
+
+            }
+
             int i = 0;
             foreach (ushort entry in ___defGrid)
             {
@@ -26,7 +45,7 @@ public class DDIHarmonyPatch
                     IntVec3 c = ___map.cellIndices.IndexToCell(i);
                     if (!c.InBounds(___map))
                     {
-                        return true;
+                        return false;
                     }
                     ThingDef thingDef = ___map.deepResourceGrid.ThingDefAt(c);
                     if (thingDef != null)
@@ -58,15 +77,23 @@ public class DDIHarmonyPatch
             }
         }
 
+        if (flagPerformance)
+        {
+            counter++;
+            if (counter >= 60)
+            {
+                flagPerformance = false;
+            }
+        }
+
         return false;
     }
 
     static bool IsDeepMiningRelated(Map ___map)
     {
-        //is Scanner running?
-        if (!___map.deepResourceGrid.AnyActiveDeepScannersOnMap())
+        if (flagPerformance)
         {
-            return false;
+            return true;
         }
 
         if (IsSelectedDeepMiningRelated())
