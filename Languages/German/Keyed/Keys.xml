@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <DeepDrillIndicator>DDI - Tiefenbohrer Indikator</DeepDrillIndicator>
-  <DeepDrillIconSize>Bildgröße(Standart 27): </DeepDrillIconSize>
+  <SwitchThreshold>Ansichtswechsel Distanz(24)</SwitchThreshold>
+  <CurrentZoomDistance>Jetzige Zoomentfernung im Spiel</CurrentZoomDistance>
+  <ScaleFarIndicator>Skalierung der großen Indikatoren(5)</ScaleFarIndicator>
+  
+  <!--The following values only support all caps and limited Charset -->
+  <!-- Look at this file for all supported chars Textures\DDIConsolas.png -->
+  
+  <LIMITEDTile>FELD</LIMITEDTile>
+  <LIMITEDTiles>FELDER</LIMITEDTiles>
 </LanguageData>

@@ -65,9 +65,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DeepResourcesCloseSectionLayer.cs" />
+    <Compile Include="DeepResourcesFarSectionLayer.cs" />
+    <Compile Include="HarmonyPatcher.cs" />
+    <Compile Include="HPatchDeepResourceGridSetAt.cs" />
+    <Compile Include="LabelStringUtil.cs" />
     <Compile Include="ListingStandardHelper.cs" />
-    <Compile Include="DDIHarmonyPatch.cs" />
+    <Compile Include="HPatchDeepResourceGrid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceClasses.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

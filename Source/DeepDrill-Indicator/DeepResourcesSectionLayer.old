@@ -1,0 +1,127 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+using Verse;
+
+namespace DeepDrill_Indicator
+{
+    internal class DeepResourcesSectionLayer : SectionLayer
+    {
+        private MaterialPropertyBlock propertyBlock;
+
+        protected virtual FloatRange VertexScaleOffsetRange => new FloatRange(0.4f, 0.6f);
+
+        protected virtual FloatRange VertexPositionOffsetRange => new FloatRange(-0.2f, 0.2f);
+
+        public override bool Visible => true;
+
+        public DeepResourcesSectionLayer(Section section)
+            : base(section)
+        {
+            //relevantChangeTypes = MapMeshFlag.Gas;
+            propertyBlock = new MaterialPropertyBlock();
+        }
+
+        public override void DrawLayer()
+        {
+            if (!Visible)
+            {
+                return;
+            }
+            propertyBlock.SetFloat(ShaderPropertyIDs.AgeSecsPausable, RealTime.UnpausedRealTime);
+            int count = subMeshes.Count;
+            for (int i = 0; i < count; i++)
+            {
+                LayerSubMesh layerSubMesh = subMeshes[i];
+                if (layerSubMesh.finalized && !layerSubMesh.disabled)
+                {
+                    Graphics.DrawMesh(layerSubMesh.mesh, Vector3.zero, Quaternion.identity, layerSubMesh.material, 0, null, 0, propertyBlock);
+                }
+            }
+        }
+
+        public override void Regenerate()
+        {
+            ClearSubMeshes(MeshParts.All);
+            float altitude = AltitudeLayer.MetaOverlays.AltitudeFor();
+
+            // A dictionary to keep track of subMeshes for each material
+            Dictionary<Material, LayerSubMesh> materialToSubMesh = new Dictionary<Material, LayerSubMesh>();
+
+            // Iterate over every cell in the section
+            foreach (IntVec3 c in section.CellRect)
+            {
+                ThingDef thingDef = base.Map.deepResourceGrid.ThingDefAt(c);
+                if (thingDef != null) // If there's a resource at this cell
+                {
+                    int resourceCount = base.Map.deepResourceGrid.CountAt(c);
+                    if (resourceCount > 0) // And there's some amount of it
+                    {
+                        Material currentMaterial = thingDef.graphic.MatSingle;
+
+                        // Check if a subMesh for this material already exists
+                        if (!materialToSubMesh.TryGetValue(currentMaterial, out LayerSubMesh subMesh))
+                        {
+                            // If not, create a new subMesh for this material
+                            subMesh = GetSubMesh(currentMaterial);
+                            materialToSubMesh[currentMaterial] = subMesh;
+                        }
+
+                        // Now, subMesh is guaranteed to be the correct one for the current material
+                        int startVertIndex = subMesh.verts.Count;
+                        AddCell(c, c.GetHashCode(), startVertIndex, subMesh, altitude);
+                    }
+                }
+            }
+
+            // Finalize each subMesh
+            foreach (var subMesh in materialToSubMesh.Values)
+            {
+                if (subMesh.verts.Count > 0)
+                {
+                    subMesh.FinalizeMesh(MeshParts.All);
+                }
+            }
+        }
+
+        protected void AddCell(IntVec3 c, int index, int startVertIndex, LayerSubMesh sm, float altitude)
+        {
+            // Fixed position with no randomness
+            float x = c.x;
+            float z = c.z;
+            float y = altitude; // Use the fixed altitude for the layer
+
+            // Define the corners of the quad directly based on the cell coordinates
+            Vector3 v1 = new Vector3(x, y, z); // Bottom-left
+            Vector3 v2 = new Vector3(x, y, z + 1); // Top-left
+            Vector3 v3 = new Vector3(x + 1, y, z + 1); // Top-right
+            Vector3 v4 = new Vector3(x + 1, y, z); // Bottom-right
+
+            // Add vertices
+            sm.verts.Add(v1);
+            sm.verts.Add(v2);
+            sm.verts.Add(v3);
+            sm.verts.Add(v4);
+
+            // UV mapping for the entire quad to match the 1x1 texture
+            sm.uvs.Add(new Vector2(0f, 0f));
+            sm.uvs.Add(new Vector2(0f, 1f));
+            sm.uvs.Add(new Vector2(1f, 1f));
+            sm.uvs.Add(new Vector2(1f, 0f));
+
+            // Adding color to the vertices
+            Color color = Color.white; // Assuming you want the original texture colors
+            sm.colors.Add(color);
+            sm.colors.Add(color);
+            sm.colors.Add(color);
+            sm.colors.Add(color);
+
+            // Define two triangles to form the quad
+            sm.tris.Add(startVertIndex);
+            sm.tris.Add(startVertIndex + 1);
+            sm.tris.Add(startVertIndex + 2);
+            sm.tris.Add(startVertIndex);
+            sm.tris.Add(startVertIndex + 2);
+            sm.tris.Add(startVertIndex + 3);
+        }
+    }
+}

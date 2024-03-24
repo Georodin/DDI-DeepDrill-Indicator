@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <DeepDrillIndicator>DDI - Deep Drill Indicator</DeepDrillIndicator>
-  <DeepDrillIconSize>Icon Size(default 27): </DeepDrillIconSize>
+  <SwitchThreshold>Switch view distance(24)</SwitchThreshold>
+  <CurrentZoomDistance>Current ingame zoom distance</CurrentZoomDistance>
+  <ScaleFarIndicator>Scale of far indicator(5)</ScaleFarIndicator>
+  
+  <!--The following values only support all caps and limited Charset -->
+  <!-- Look at this file for all supported chars Textures\DDIConsolas.png -->
+  
+  <LIMITEDTile>TILE</LIMITEDTile>
+  <LIMITEDTiles>TILES</LIMITEDTiles>
 </LanguageData>

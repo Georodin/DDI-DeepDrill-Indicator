@@ -6,12 +6,17 @@ namespace DeepDrill_Indicator
 {
     public class Settings : ModSettings
     {
-        public static float sliderValueDDI = 27f;
+        public static float SwitchThreshold = 20.0f;
+
+        public static float ScaleFarIndicator = 5.0f;
+
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref sliderValueDDI, "sliderValueDDI");
+            Scribe_Values.Look(ref SwitchThreshold, "DDISwitchThreshold", 20.0f);
+            Scribe_Values.Look(ref ScaleFarIndicator, "DDIScaleFarIndicator", 5.0f);
         }
     }
+
     public class DeepDrill_IndicatorMod : Mod
     {
         Settings settings;
@@ -25,8 +30,14 @@ namespace DeepDrill_Indicator
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.Label("DeepDrillIconSize".Translate()+Mathf.FloorToInt(Settings.sliderValueDDI));
-            Settings.sliderValueDDI = listingStandard.Slider(DeepDrill_Indicator.Settings.sliderValueDDI, 6f, 80f);
+
+            listingStandard.Label($"{"SwitchThreshold".Translate()}: {Settings.SwitchThreshold:F2}");
+            Settings.SwitchThreshold = listingStandard.Slider(Settings.SwitchThreshold, 0.0f, 200.0f);
+            listingStandard.Label($"{"CurrentZoomDistance".Translate()}: {Find.CameraDriver.ZoomRootSize:F2}\n");
+
+            listingStandard.Label($"{"ScaleFarIndicator".Translate()}: {Settings.ScaleFarIndicator:F2}");
+            Settings.ScaleFarIndicator = listingStandard.Slider(Settings.ScaleFarIndicator, 0.0f, 25.0f);
+
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
@@ -35,5 +46,12 @@ namespace DeepDrill_Indicator
         {
             return "DeepDrillIndicator".Translate();
         }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            Controller.ShouldUpdate(IntVec3.Zero, true);
+        }
+
     }
 }
