@@ -13,6 +13,13 @@ Big thanks to the people in the RimWorld Discord #mod-development section!
 (https://discord.gg/rimworld)
 
 ## Changelogs
+### Update Mar 2024
+- major indicator changes
+- added large overview indicator
+- new display system using vanilla SectionLayers
+- performance improvement
+- using deviant of https://github.com/Falconne/LabelsOnFloor
+
 ### Update Sep 2023
 - fixed display of resource amount
 - fixed display while in build mode with DeepDrill
