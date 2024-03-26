@@ -7,7 +7,7 @@ This mod simply adds a overlay to all found deep drill resources, so you don't h
 You need a powered Ground-penetrating scanner in order display found resources.
 
 Let me know about bugs or improvements here or at Steam...
-(https://github.com/Georodin/DDI-DeepDrill-Indicator)
+(https://steamcommunity.com/sharedfiles/filedetails/?id=2566736688)
 
 Big thanks to the people in the RimWorld Discord #mod-development section!
 (https://discord.gg/rimworld)
