@@ -12,15 +12,13 @@ namespace DeepDrill_Indicator
     {
         private MaterialPropertyBlock propertyBlock;
         public static bool isVisible = false;
-        public Section p_Section;
+        public Section Section => section;
 
         public DeepResourcesCloseSectionLayer(Section section)
             : base(section)
         {
-            relevantChangeTypes = MapMeshFlag.Roofs;
             propertyBlock = new MaterialPropertyBlock();
-            p_Section = section;
-            Controller.SectionLayersClose.Add(this);
+            Map.GetComponent<GridController>().SectionLayersClose.Add(this);
         }
 
         public bool updateDeepResourceGrid = false;
@@ -60,27 +58,21 @@ namespace DeepDrill_Indicator
                     Graphics.DrawMesh(layerSubMesh.mesh, Vector3.zero, Quaternion.identity, layerSubMesh.material, 0, null, 0, propertyBlock);
                 }
             }
-
         }
-
 
         public override void Regenerate()
         {
-
-            if (!ResourceUtil.isInitialized)
-            {
-                ResourceUtil.UpdateGrid(Map);
-            }
 
             ClearSubMeshes(MeshParts.All);
             float altitude = AltitudeLayer.MetaOverlays.AltitudeFor();
 
             List<LayerSubMesh> subMeshs = new List<LayerSubMesh>();
 
-            foreach(ResourceInGrid resource in ResourceUtil.resourcesInGrid)
+            foreach (ResourceCell resource in Map.GetComponent<ResourceUtil>().resourceCells)
             {
                 if (section.CellRect.Contains(resource.location))
                 {
+                    //Log.Message("RES: "+resource.ToString());
                     Material currentMaterial = resource.thingDef.graphic.MatSingle;
 
                     LayerSubMesh subMesh = GetSubMesh(currentMaterial);
@@ -94,19 +86,31 @@ namespace DeepDrill_Indicator
                         subMeshes.Add(subMesh);
                     }
 
-                    CreateTextLine(resource.count+"", resource.location, altitude, .2f);
+                    CreateTextLine(resource.count + "", resource.location, altitude, .2f);
+                }
+            }
+
+            for (int i = subMeshes.Count - 1; i >= 0; i--)
+            {
+                if (subMeshes[i].verts.Count == 0)
+                {
+                    subMeshes.RemoveAt(i);
                 }
             }
 
             foreach (LayerSubMesh subMesh in subMeshes)
             {
+                if (subMesh.verts.Count == 0)
+                {
+                    subMesh.disabled = true;
+                }
                 subMesh.FinalizeMesh(MeshParts.All);
             }
         }
 
         void CreateTextLine(string text, IntVec3 center, float altitude, float scaleFactor)
         {
-            MeshHandler meshHandler = Controller.meshHandler;
+            MeshHandler meshHandler = GridController.meshHandler;
             Mesh fontMesh = meshHandler.GetMeshFor(text);
             Material fontMaterial = meshHandler._fontHandler.GetMaterial();
 

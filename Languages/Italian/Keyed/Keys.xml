@@ -4,6 +4,7 @@
   <SwitchThreshold>Switch view distance(24)</SwitchThreshold>
   <CurrentZoomDistance>Current ingame zoom distance</CurrentZoomDistance>
   <ScaleFarIndicator>Scale of far indicator(5)</ScaleFarIndicator>
+  <DisableSteelOverview>Hide Steel in overview</DisableSteelOverview>
   
   <!--The following values only support all caps and limited Charset -->
   <!-- Look at this file for all supported chars Textures\DDIConsolas.png -->

@@ -7,13 +7,16 @@ namespace DeepDrill_Indicator
     public class Settings : ModSettings
     {
         public static float SwitchThreshold = 20.0f;
-
         public static float ScaleFarIndicator = 5.0f;
+        // New boolean setting for disabling steel display
+        public static bool DisableSteelOverview = false;
 
         public override void ExposeData()
         {
             Scribe_Values.Look(ref SwitchThreshold, "DDISwitchThreshold", 20.0f);
             Scribe_Values.Look(ref ScaleFarIndicator, "DDIScaleFarIndicator", 5.0f);
+            // Ensure the new setting is saved and loaded
+            Scribe_Values.Look(ref DisableSteelOverview, "DDIDisableSteelOverview", false);
         }
     }
 
@@ -38,6 +41,9 @@ namespace DeepDrill_Indicator
             listingStandard.Label($"{"ScaleFarIndicator".Translate()}: {Settings.ScaleFarIndicator:F2}");
             Settings.ScaleFarIndicator = listingStandard.Slider(Settings.ScaleFarIndicator, 0.0f, 25.0f);
 
+            // Add a checkbox for the new setting
+            listingStandard.CheckboxLabeled("DisableSteelOverview".Translate(), ref Settings.DisableSteelOverview);
+
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
@@ -50,7 +56,7 @@ namespace DeepDrill_Indicator
         public override void WriteSettings()
         {
             base.WriteSettings();
-            Controller.ShouldUpdate(IntVec3.Zero, true);
+            Find.CurrentMap.GetComponent<GridController>().ShouldUpdate(IntVec3.Zero, true);
         }
 
     }

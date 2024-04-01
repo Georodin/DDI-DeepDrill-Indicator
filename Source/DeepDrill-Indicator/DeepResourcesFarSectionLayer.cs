@@ -13,14 +13,13 @@ namespace DeepDrill_Indicator
         private MaterialPropertyBlock propertyBlock;
         public static bool isVisible = false;
 
-        public Section p_Section;
+        public Section Section => section;
 
         public DeepResourcesFarSectionLayer(Section section)
             : base(section)
         {
             propertyBlock = new MaterialPropertyBlock();
-            p_Section = section;
-            Controller.SectionLayersFar.Add(this);
+            Map.GetComponent<GridController>().SectionLayersFar.Add(this);
         }
 
         public bool updateDeepResourceGrid = false;
@@ -60,24 +59,23 @@ namespace DeepDrill_Indicator
                     Graphics.DrawMesh(layerSubMesh.mesh, Vector3.zero, Quaternion.identity, layerSubMesh.material, 0, null, 0, propertyBlock);
                 }
             }
-
         }
 
         public override void Regenerate()
         {
-
-            if (!ResourceUtil.isInitialized)
-            {
-                ResourceUtil.UpdateGrid(Map);
-            }
 
             ClearSubMeshes(MeshParts.All);
             float altitude = AltitudeLayer.MetaOverlays.AltitudeFor();
 
             List<LayerSubMesh> subMeshs = new List<LayerSubMesh>();
 
-            foreach (ResourceField field in ResourceUtil.resourcesField)
+            foreach (ResourceField field in Map.GetComponent<ResourceUtil>().resourcesField)
             {
+                if (Settings.DisableSteelOverview&&field.thingDef==ThingDefOf.Steel)
+                {
+                    continue;
+                }
+
                 if (section.CellRect.Contains(field.center))
                 {
                     Material currentMaterial = field.thingDef.graphic.MatSingle;
@@ -93,9 +91,9 @@ namespace DeepDrill_Indicator
                         subMeshes.Add(subMesh);
                     }
 
-                    string label = $"{field.thingDef.label.ToUpper()}: {field.totalCount}<br>{field.tileCount}";
+                    string label = $"{field.thingDef.label.ToUpper()}: {field.GetResCount()}<br>{field.GetTileCount()}";
 
-                    if (field.tileCount == 1)
+                    if (field.GetTileCount() == 1)
                     {
                         label += $" {"LIMITEDTile".Translate()}";
                     }
@@ -104,7 +102,15 @@ namespace DeepDrill_Indicator
                         label += $" {"LIMITEDTiles".Translate()}";
                     }
 
-                    CreateTextLine(label, field.center, altitude);
+                    CreateTextLine(label, field.center, altitude, field.thingDef);
+                }
+            }
+
+            for (int i = subMeshes.Count - 1; i >= 0; i--)
+            {
+                if (subMeshes[i].verts.Count == 0)
+                {
+                    subMeshes.RemoveAt(i);
                 }
             }
 
@@ -114,9 +120,11 @@ namespace DeepDrill_Indicator
             }
         }
 
-        void CreateTextLine(string text, IntVec3 center, float altitude)
+        void CreateTextLine(string text, IntVec3 center, float altitude, ThingDef thingDef)
         {
-            MeshHandler meshHandler = Controller.meshHandler;
+            Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
+
+            MeshHandler meshHandler = GridController.meshHandler;
             Mesh fontMesh = meshHandler.GetMeshFor(text);
             Material fontMaterial = meshHandler._fontHandler.GetMaterial();
 
@@ -175,6 +183,8 @@ namespace DeepDrill_Indicator
             {
                 subMeshes.Add(fontSubMesh);
             }
+
+            Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
         }
 
         protected void AddCell(IntVec3 c, int index, int startVertIndex, LayerSubMesh sm, float altitude, float scaleFactor)

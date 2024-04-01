@@ -65,11 +65,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller.cs" />
+    <Compile Include="GridController.cs" />
     <Compile Include="DeepResourcesCloseSectionLayer.cs" />
     <Compile Include="DeepResourcesFarSectionLayer.cs" />
     <Compile Include="HarmonyPatcher.cs" />
-    <Compile Include="HPatchDeepResourceGridSetAt.cs" />
     <Compile Include="LabelStringUtil.cs" />
     <Compile Include="ListingStandardHelper.cs" />
     <Compile Include="HPatchDeepResourceGrid.cs" />

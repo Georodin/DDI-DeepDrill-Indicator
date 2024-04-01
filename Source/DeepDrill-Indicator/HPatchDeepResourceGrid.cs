@@ -1,9 +1,10 @@
 ﻿using HarmonyLib;
 using Verse;
 using RimWorld;
-using UnityEngine;
 using DeepDrill_Indicator;
-using static System.Collections.Specialized.BitVector32;
+using System.IO;
+using System.Linq;
+using System;
 
 [HarmonyPatch(typeof(DeepResourceGrid), "DeepResourcesOnGUI")]
 public class HPatchDeepResourceGrid
@@ -14,6 +15,27 @@ public class HPatchDeepResourceGrid
 
         DeepResourcesCloseSectionLayer.isVisible = related;
         DeepResourcesFarSectionLayer.isVisible = related;
+
+        /*
+        try
+        {
+            // Define file paths
+            string defGridPath = Path.Combine(GenFilePaths.SaveDataFolderPath, "DefGrid.txt");
+            string countGridPath = Path.Combine(GenFilePaths.SaveDataFolderPath, "CountGrid.txt");
+
+            // Save ___defGrid to DefGrid.txt
+            File.WriteAllLines(defGridPath, ___defGrid.Select(d => d.ToString()));
+            Log.Message($"DefGrid saved to: {defGridPath}");
+
+            // Save ___countGrid to CountGrid.txt
+            File.WriteAllLines(countGridPath, ___countGrid.Select(c => c.ToString()));
+            Log.Message($"CountGrid saved to: {countGridPath}");
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"Failed to save grids: {ex.Message}");
+        }
+        */
 
         return false;
     }

@@ -4,6 +4,7 @@
   <SwitchThreshold>Ansichtswechsel Distanz(24)</SwitchThreshold>
   <CurrentZoomDistance>Jetzige Zoomentfernung im Spiel</CurrentZoomDistance>
   <ScaleFarIndicator>Skalierung der großen Indikatoren(5)</ScaleFarIndicator>
+  <DisableSteelOverview>Verstecke Stahlvorkommen in Übersicht</DisableSteelOverview>
   
   <!--The following values only support all caps and limited Charset -->
   <!-- Look at this file for all supported chars Textures\DDIConsolas.png -->
