@@ -31,7 +31,7 @@ namespace DeepDrill_Indicator
         static void Postfix(ThingWithComps ___parent)
         {
             ___parent.Map.GetComponent<ResourceUtil>().UpdateGridFields();
-            Log.Message("TryProducePortion");
+            //Log.Message("TryProducePortion");
         }
     }
     
@@ -41,7 +41,7 @@ namespace DeepDrill_Indicator
         static void Postfix(ThingWithComps ___parent)
         {
             ___parent.Map.GetComponent<ResourceUtil>().UpdateGridFields();
-            Log.Message("DoFind");
+            //Log.Message("DoFind");
         }
     }
 }

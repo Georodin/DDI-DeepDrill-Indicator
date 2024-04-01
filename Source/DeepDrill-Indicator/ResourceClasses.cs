@@ -43,7 +43,7 @@ namespace DeepDrill_Indicator
             ProcessAllCellsIntoFields();
 
             stopwatch.Stop();
-            Log.Message($"InitializeGrid execution time: {stopwatch.ElapsedMilliseconds} ms");
+            //Log.Message($"InitializeGrid execution time: {stopwatch.ElapsedMilliseconds} ms");
         }
 
         public void UpdateAt(IntVec3 position)
@@ -126,7 +126,7 @@ namespace DeepDrill_Indicator
 
             ProcessAllCellsIntoFields();
 
-            Log.Message($"UpdateGrid execution time: {stopwatch.ElapsedMilliseconds} ms");
+            //Log.Message($"UpdateGrid execution time: {stopwatch.ElapsedMilliseconds} ms");
         }
 
         static bool IsCloseEnough(ResourceCell cellA, ResourceCell cellB)

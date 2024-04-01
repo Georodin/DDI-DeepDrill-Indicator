@@ -122,7 +122,7 @@ namespace DeepDrill_Indicator
 
         void CreateTextLine(string text, IntVec3 center, float altitude, ThingDef thingDef)
         {
-            Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
+            //Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
 
             MeshHandler meshHandler = GridController.meshHandler;
             Mesh fontMesh = meshHandler.GetMeshFor(text);
@@ -184,7 +184,7 @@ namespace DeepDrill_Indicator
                 subMeshes.Add(fontSubMesh);
             }
 
-            Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
+            //Debug.Log($"Created TEXT{text} with Thing{thingDef.defName}");
         }
 
         protected void AddCell(IntVec3 c, int index, int startVertIndex, LayerSubMesh sm, float altitude, float scaleFactor)
