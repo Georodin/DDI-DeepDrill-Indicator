@@ -13,6 +13,12 @@ Big thanks to the people in the RimWorld Discord #mod-development section!
 (https://discord.gg/rimworld)
 
 ## Changelogs
+###Update Apr 2024
+- feature: hide Steel in overview
+- added multiple colony/map support
+- fixed fields displaying when exhausted
+- performance improvement when many fields on map
+
 ### Update Mar 2024
 - major indicator changes
 - added large overview indicator
