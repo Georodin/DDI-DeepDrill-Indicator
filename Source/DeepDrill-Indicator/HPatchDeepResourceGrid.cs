@@ -2,9 +2,6 @@
 using Verse;
 using RimWorld;
 using DeepDrill_Indicator;
-using System.IO;
-using System.Linq;
-using System;
 
 [HarmonyPatch(typeof(DeepResourceGrid), "DeepResourcesOnGUI")]
 public class HPatchDeepResourceGrid

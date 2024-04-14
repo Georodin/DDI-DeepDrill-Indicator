@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using System.Diagnostics; // Make sure to include this for Stopwatch
-using UnityEngine;
-using Verse.Noise;
-using RimWorld;
 
 namespace DeepDrill_Indicator
 {

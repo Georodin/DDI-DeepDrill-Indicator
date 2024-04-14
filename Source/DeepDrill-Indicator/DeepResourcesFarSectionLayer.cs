@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using static RimWorld.ColonistBar;
-using System;
-using System.Linq;
 
 namespace DeepDrill_Indicator
 {

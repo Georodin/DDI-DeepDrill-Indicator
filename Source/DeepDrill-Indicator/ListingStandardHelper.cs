@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 using UnityEngine;
 
 namespace DeepDrill_Indicator
