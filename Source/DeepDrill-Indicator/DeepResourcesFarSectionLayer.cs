@@ -35,7 +35,7 @@ namespace DeepDrill_Indicator
                 return;
             }
 
-            if (Find.CameraDriver.ZoomRootSize <= Settings.SwitchThreshold)
+            if (Find.CameraDriver.ZoomRootSize <= DDISettings.Instance.SwitchThreshold)
             {
                 return;
             }
@@ -68,7 +68,7 @@ namespace DeepDrill_Indicator
 
             foreach (ResourceField field in Map.GetComponent<ResourceUtil>().resourcesField)
             {
-                if (Settings.DisableSteelOverview&&field.thingDef==ThingDefOf.Steel)
+                if (DDISettings.Instance.DisableSteelOverview&&field.thingDef==ThingDefOf.Steel)
                 {
                     continue;
                 }
@@ -81,7 +81,7 @@ namespace DeepDrill_Indicator
 
                     int startVertIndex = subMesh.verts.Count;
 
-                    AddCell(field.center, field.center.GetHashCode(), startVertIndex, subMesh, altitude, DeepDrill_Indicator.Settings.ScaleFarIndicator);
+                    AddCell(field.center, field.center.GetHashCode(), startVertIndex, subMesh, altitude, DeepDrill_Indicator.DDISettings.Instance.ScaleFarIndicator);
 
                     if (!subMeshes.Contains(subMesh))
                     {
@@ -128,7 +128,7 @@ namespace DeepDrill_Indicator
 
             Vector3 worldPositionText = new Vector3(center.x, 0, center.z);
 
-            float scaleFactor = DeepDrill_Indicator.Settings.ScaleFarIndicator * 0.2f;
+            float scaleFactor = DeepDrill_Indicator.DDISettings.Instance.ScaleFarIndicator * 0.2f;
 
             LayerSubMesh fontSubMesh = GetSubMesh(fontMaterial);
 
