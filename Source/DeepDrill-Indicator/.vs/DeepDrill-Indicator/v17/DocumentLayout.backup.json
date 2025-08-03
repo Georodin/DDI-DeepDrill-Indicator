@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|c:\\users\\georodin\\documents\\github\\ddi-deepdrill-indicator\\source\\deepdrill-indicator\\listingstandardhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:listingstandardhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\labelstringutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:labelstringutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\About\\About.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\deepresourcesfarsectionlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:deepresourcesfarsectionlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DeepDrill-Indicator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\harmonypatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:harmonypatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\deepresourcesclosesectionlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:deepresourcesclosesectionlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\resourceclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:resourceclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\hpatchdeepresourcegrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|solutionrelative:hpatchdeepresourcegrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A7075-8C6C-4D26-AB75-ED033F5892A2}|DeepDrill-Indicator.csproj|c:\\users\\georodin\\documents\\github\\ddi-deepdrill-indicator\\source\\deepdrill-indicator\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "About.xml",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\About\\About.xml",
+              "RelativeDocumentMoniker": "..\\..\\About\\About.xml",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\About\\About.xml",
+              "RelativeToolTip": "..\\..\\About\\About.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-08-03T18:49:43.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeepDrill-Indicator",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepDrill-Indicator.csproj",
+              "RelativeDocumentMoniker": "DeepDrill-Indicator.csproj",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepDrill-Indicator.csproj",
+              "RelativeToolTip": "DeepDrill-Indicator.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-14T09:32:20.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeepResourcesFarSectionLayer.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepResourcesFarSectionLayer.cs",
+              "RelativeDocumentMoniker": "DeepResourcesFarSectionLayer.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepResourcesFarSectionLayer.cs",
+              "RelativeToolTip": "DeepResourcesFarSectionLayer.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:25:54.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeepResourcesCloseSectionLayer.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepResourcesCloseSectionLayer.cs",
+              "RelativeDocumentMoniker": "DeepResourcesCloseSectionLayer.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\DeepResourcesCloseSectionLayer.cs",
+              "RelativeToolTip": "DeepResourcesCloseSectionLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:25:06.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LabelStringUtil.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\LabelStringUtil.cs",
+              "RelativeDocumentMoniker": "LabelStringUtil.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\LabelStringUtil.cs",
+              "RelativeToolTip": "LabelStringUtil.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T14:21:42.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResourceClasses.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\ResourceClasses.cs",
+              "RelativeDocumentMoniker": "ResourceClasses.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\ResourceClasses.cs",
+              "RelativeToolTip": "ResourceClasses.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:27:22.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HarmonyPatcher.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\HarmonyPatcher.cs",
+              "RelativeDocumentMoniker": "HarmonyPatcher.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\HarmonyPatcher.cs",
+              "RelativeToolTip": "HarmonyPatcher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T15:42:07.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListingStandardHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\ListingStandardHelper.cs",
+              "RelativeDocumentMoniker": "ListingStandardHelper.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\ListingStandardHelper.cs",
+              "RelativeToolTip": "ListingStandardHelper.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-16T21:20:44.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GridController.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\GridController.cs",
+              "RelativeDocumentMoniker": "GridController.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\GridController.cs",
+              "RelativeToolTip": "GridController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T17:52:27.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HPatchDeepResourceGrid.cs",
+              "DocumentMoniker": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\HPatchDeepResourceGrid.cs",
+              "RelativeDocumentMoniker": "HPatchDeepResourceGrid.cs",
+              "ToolTip": "C:\\Users\\Georodin\\Documents\\GitHub\\DDI-DeepDrill-Indicator\\Source\\DeepDrill-Indicator\\HPatchDeepResourceGrid.cs",
+              "RelativeToolTip": "HPatchDeepResourceGrid.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-16T21:20:41.016Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

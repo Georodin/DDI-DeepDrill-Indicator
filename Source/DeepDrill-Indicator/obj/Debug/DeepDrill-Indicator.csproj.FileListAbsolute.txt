@@ -14,3 +14,4 @@ C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Source\DeepDrill-Indi
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\Source\DeepDrill-Indicator\obj\Debug\DeepDrill-Indicator.dll
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\1.4\Assemblies\DeepDrill-Indicator.dll
 C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\1.5\Assemblies\DeepDrill-Indicator.dll
+C:\Users\Georodin\Documents\GitHub\DDI-DeepDrill-Indicator\1.6\Assemblies\DeepDrill-Indicator.dll

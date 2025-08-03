@@ -33,7 +33,7 @@ namespace DeepDrill_Indicator
                 return;
             }
 
-            if (Find.CameraDriver.ZoomRootSize > DDISettings.Instance.SwitchThreshold)
+            if (Find.CameraDriver.ZoomRootSize > DDISettings.SwitchThreshold)
             {
                 return;
             }
